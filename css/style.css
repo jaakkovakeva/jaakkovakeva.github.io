@@ -254,6 +254,10 @@ section + section {
   cursor: zoom-in;
 }
 
+.photo-lightbox-trigger--full-row {
+  grid-column: 1 / -1;
+}
+
 .photo-lightbox {
   width: min(96vw, 90rem);
   max-width: none;
