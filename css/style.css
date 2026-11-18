@@ -207,6 +207,7 @@ section + section {
 }
 
 .photo-series-view:target {
+  --gallery-padding: clamp(1.25rem, 3vw, 2rem);
   position: fixed;
   z-index: 10;
   inset: var(--header-height) 0 0;
@@ -215,12 +216,19 @@ section + section {
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
-  padding: clamp(1.25rem, 3vw, 2rem);
+  padding: 0 var(--gallery-padding) var(--gallery-padding);
   background: var(--background);
 }
 
 .photo-series-close {
-  align-self: flex-start;
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  align-self: stretch;
+  margin-inline: calc(0rem - var(--gallery-padding));
+  padding: 0.5rem var(--gallery-padding);
+  border-bottom: 1px solid var(--border);
+  background: var(--background);
 }
 
 .photo-series-view h3 {
