@@ -245,6 +245,10 @@ section + section {
   gap: 1.5rem;
 }
 
+.photo-series-images--two-columns {
+  max-width: 46rem;
+}
+
 .photo-series-images img {
   display: block;
   max-width: 100%;
