@@ -100,7 +100,9 @@ a:hover {
   gap: 0.5rem 2rem;
   padding-inline: max(1.25rem, calc((100vw - 50rem) / 2));
   border-bottom: 1px solid var(--border);
-  background: var(--background);
+  background: rgba(255, 255, 255, 0.62);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
 }
 
 .site-name {
@@ -210,13 +212,13 @@ section + section {
   --gallery-padding: clamp(1.25rem, 3vw, 2rem);
   position: fixed;
   z-index: 10;
-  inset: var(--header-height) 0 0;
+  inset: 0;
   display: flex;
   overflow-y: auto;
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
-  padding: 0 var(--gallery-padding) var(--gallery-padding);
+  padding: var(--header-height) var(--gallery-padding) var(--gallery-padding);
   background: var(--background);
 }
 
@@ -228,7 +230,9 @@ section + section {
   margin-inline: calc(0rem - var(--gallery-padding));
   padding: 0.5rem var(--gallery-padding);
   border-bottom: 1px solid var(--border);
-  background: var(--background);
+  background: rgba(255, 255, 255, 0.62);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
 }
 
 .photo-series-view h3 {
