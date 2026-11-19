@@ -12,14 +12,37 @@
     <a class="skip-link" href="#main-content">Skip to content</a>
 
     <header class="site-header">
-      <a class="site-name" href="index.html">Jaakko Väkevä</a>
-      <nav aria-label="Main navigation">
+      <a class="site-name" href="index.html">
+        <img src="images/calligraphy/name-v3-1550px.png" alt="Jaakko Väkevä" width="1550" height="250">
+      </a>
+      <a class="gallery-back-link" href="#photography" aria-label="Back to Photography" hidden>
+        <svg class="drawn-gallery-back-arrow" viewBox="0 0 40 32" aria-hidden="true" focusable="false">
+          <path d="M35 14 C26 14 16 16 5 17 M5 17 C9 14 12 10 16 6 M5 17 C9 19 12 23 16 27"></path>
+        </svg>
+      </a>
+      <nav class="desktop-navigation" aria-label="Main navigation">
         <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#research">Research</a></li>
-          <li><a href="#photography">Photography</a></li>
+          <li class="nav-about"><a href="#about"><img src="images/calligraphy/about-400px.png" alt="About" width="400" height="132"></a></li>
+          <li class="nav-research"><a href="#research"><img src="images/calligraphy/research-600px.png" alt="Research" width="600" height="162"></a></li>
+          <li class="nav-photography"><a href="#photography"><img src="images/calligraphy/photography-800px.png" alt="Photography" width="800" height="196"></a></li>
         </ul>
       </nav>
+      <details class="mobile-menu">
+        <summary class="mobile-menu-toggle" aria-label="Navigation menu" aria-controls="mobile-navigation">
+          <span class="mobile-menu-icon" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </summary>
+        <nav id="mobile-navigation" class="mobile-menu-panel" aria-label="Mobile navigation">
+          <ul>
+            <li><a href="#about"><img src="images/calligraphy/about-400px.png" alt="About" width="400" height="132"></a></li>
+            <li><a href="#research"><img src="images/calligraphy/research-600px.png" alt="Research" width="600" height="162"></a></li>
+            <li><a href="#photography"><img src="images/calligraphy/photography-800px.png" alt="Photography" width="800" height="196"></a></li>
+          </ul>
+        </nav>
+      </details>
     </header>
 
     <main id="main-content">

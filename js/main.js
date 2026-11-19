@@ -5,6 +5,47 @@ if (currentYear) {
   currentYear.textContent = new Date().getFullYear();
 }
 
+const mobileMenu = document.querySelector(".site-header .mobile-menu");
+
+if (mobileMenu instanceof HTMLDetailsElement) {
+  mobileMenu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileMenu.open = false;
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape" || !mobileMenu.open) {
+      return;
+    }
+
+    mobileMenu.open = false;
+    mobileMenu.querySelector("summary")?.focus();
+  });
+}
+
+const galleryBackLink = document.querySelector(".site-header .gallery-back-link");
+
+if (galleryBackLink instanceof HTMLAnchorElement) {
+  const updateGalleryBackLink = () => {
+    const activeBackLink = document.querySelector(".photo-series-view:target > .photo-series-close");
+
+    if (activeBackLink instanceof HTMLAnchorElement) {
+      galleryBackLink.href = activeBackLink.href;
+      galleryBackLink.setAttribute("aria-label", activeBackLink.textContent.trim());
+      galleryBackLink.hidden = false;
+      document.body.classList.add("gallery-back-link-in-header");
+    } else {
+      galleryBackLink.hidden = true;
+      document.body.classList.remove("gallery-back-link-in-header");
+    }
+  };
+
+  window.addEventListener("hashchange", updateGalleryBackLink);
+  window.addEventListener("pageshow", updateGalleryBackLink);
+  updateGalleryBackLink();
+}
+
 const photoLightbox = document.querySelector(".photo-lightbox");
 const photoLightboxImage = photoLightbox?.querySelector(".photo-lightbox-image");
 const photoLightboxClose = photoLightbox?.querySelector(".photo-lightbox-close");
