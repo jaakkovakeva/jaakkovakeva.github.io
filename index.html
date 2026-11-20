@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Research and photography by Jaakko Väkevä.">
     <title>Jaakko Väkevä | Research &amp; Photography</title>
+    <link rel="preload" as="image" href="images/calligraphy/name-v3-1550px.png" fetchpriority="high">
+    <link rel="preload" as="image" href="images/calligraphy/about-400px.png" fetchpriority="high">
+    <link rel="preload" as="image" href="images/calligraphy/research-600px.png" fetchpriority="high">
+    <link rel="preload" as="image" href="images/calligraphy/photography-800px.png" fetchpriority="high">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" defer></script>
   </head>
@@ -13,18 +17,19 @@
 
     <header class="site-header">
       <a class="site-name" href="index.html">
-        <img src="images/calligraphy/name-v3-1550px.png" alt="Jaakko Väkevä" width="1550" height="250">
+        <img src="images/calligraphy/name-v3-1550px.png" alt="Jaakko Väkevä" width="1550" height="250" loading="eager" fetchpriority="high" decoding="sync">
       </a>
       <a class="gallery-back-link" href="#photography" aria-label="Back to Photography" hidden>
         <svg class="drawn-gallery-back-arrow" viewBox="0 0 40 32" aria-hidden="true" focusable="false">
-          <path d="M35 14 C26 14 16 16 5 17 M5 17 C9 14 12 10 16 6 M5 17 C9 19 12 23 16 27"></path>
+          <path class="desktop-back-arrow-path" d="M37 12 C27 12 15 17 3 18 M3 18 C8 15 11 11 16 6 M3 18 C8 21 11 25 16 29"></path>
+          <path class="mobile-back-arrow-path" d="M35 14 C26 14 16 16 5 17 M5 17 C9 14 12 10 16 6 M5 17 C9 19 12 23 16 27"></path>
         </svg>
       </a>
       <nav class="desktop-navigation" aria-label="Main navigation">
         <ul>
-          <li class="nav-about"><a href="#about"><img src="images/calligraphy/about-400px.png" alt="About" width="400" height="132"></a></li>
-          <li class="nav-research"><a href="#research"><img src="images/calligraphy/research-600px.png" alt="Research" width="600" height="162"></a></li>
-          <li class="nav-photography"><a href="#photography"><img src="images/calligraphy/photography-800px.png" alt="Photography" width="800" height="196"></a></li>
+          <li class="nav-about"><a href="#about"><img src="images/calligraphy/about-400px.png" alt="About" width="400" height="132" loading="eager" fetchpriority="high" decoding="sync"></a></li>
+          <li class="nav-research"><a href="#research"><img src="images/calligraphy/research-600px.png" alt="Research" width="600" height="162" loading="eager" fetchpriority="high" decoding="sync"></a></li>
+          <li class="nav-photography"><a href="#photography"><img src="images/calligraphy/photography-800px.png" alt="Photography" width="800" height="196" loading="eager" fetchpriority="high" decoding="sync"></a></li>
         </ul>
       </nav>
       <details class="mobile-menu">
@@ -37,9 +42,9 @@
         </summary>
         <nav id="mobile-navigation" class="mobile-menu-panel" aria-label="Mobile navigation">
           <ul>
-            <li><a href="#about"><img src="images/calligraphy/about-400px.png" alt="About" width="400" height="132"></a></li>
-            <li><a href="#research"><img src="images/calligraphy/research-600px.png" alt="Research" width="600" height="162"></a></li>
-            <li><a href="#photography"><img src="images/calligraphy/photography-800px.png" alt="Photography" width="800" height="196"></a></li>
+            <li><a href="#about"><img src="images/calligraphy/about-400px.png" alt="About" width="400" height="132" loading="eager" fetchpriority="high" decoding="sync"></a></li>
+            <li><a href="#research"><img src="images/calligraphy/research-600px.png" alt="Research" width="600" height="162" loading="eager" fetchpriority="high" decoding="sync"></a></li>
+            <li><a href="#photography"><img src="images/calligraphy/photography-800px.png" alt="Photography" width="800" height="196" loading="eager" fetchpriority="high" decoding="sync"></a></li>
           </ul>
         </nav>
       </details>
